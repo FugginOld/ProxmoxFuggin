@@ -268,11 +268,11 @@ UPDATE () {
     if [[ -f /etc/update-motd.d/01-welcome-screen ]]; then
       mv "$TEMP_FILES"/welcome-screen.sh /etc/update-motd.d/01-welcome-screen
       chmod +x /etc/update-motd.d/01-welcome-screen
-      if [[ -f /usr/bin/neofetch ]] && [[ ! -f /usr/bin/screenfetch ]]; then
+      if [[ -f /usr/bin/neofetch ]] && [[ ! -f /usr/bin/fastfetch ]]; then
         echo -e "${OR:-}I detect neofetch was installed. On PVE9 neofetch is no more supported.${CL:-}"
-        read -p " Should I install screenfetch for you instead? Type [Y/y] or Enter for yes - anything else will exit: " -r
+        read -p " Should I install fastfetch for you instead? Type [Y/y] or Enter for yes - anything else will exit: " -r
         if [[ $REPLY =~ ^[Yy]$ || $REPLY = "" ]]; then
-          apt-get install screenfetch -y || true
+          apt-get install fastfetch -y || true
         fi
       fi
       # change crontab entry
