@@ -56,7 +56,7 @@ Changelog: [here](https://github.com/BassT23/Proxmox/blob/master/change.log)
 # Installation:
 In Proxmox GUI Host Shell or as root on proxmox host terminal:
 ```
-bash <(curl -s https://raw.githubusercontent.com/FugginOld/FugginProxmox/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/FugginOld/ProxmoxFuggin/master/install.sh)
 ```
 
 # Usage:
@@ -98,7 +98,7 @@ So connect from first node (on which you install the Proxmox-Updater) to node2 w
 
 If update run into issue, please remove first with:
 ```
-bash <(curl -s https://raw.githubusercontent.com/FugginOld/FugginProxmox/master/install.sh) uninstall
+bash <(curl -s https://raw.githubusercontent.com/FugginOld/ProxmoxFuggin/master/install.sh) uninstall
 ```
 and install new
 
