@@ -398,12 +398,12 @@ WELCOME_SCREEN_INSTALL () {
   if ! grep -q "check-updates.sh" /etc/crontab; then
     echo "00 07,19 * * *  root    update -check >/dev/null 2>&1" >> /etc/crontab
   fi
-  if ! [[ -f /usr/bin/screenfetch ]]; then
-    echo -e "${OR:-}  with or without screenfetch?${CL:-}"
-    read -p "  Type [Y/y] or Enter for install with screenfetch - anything else will skip: " -r
+  if ! [[ -f /usr/bin/fastfetch ]]; then
+    echo -e "${OR:-}  with or without fastfetch?${CL:-}"
+    read -p "  Type [Y/y] or Enter for install with fastfetch - anything else will skip: " -r
     if [[ $REPLY =~ ^[Yy]$ || $REPLY = "" ]]; then 
-      apt-get install screenfetch -y || true
-      echo -e "\n✅${GN:-} Welcome-Screen installed with screenfetch${CL:-}"
+      apt-get install fastfetch -y || true
+      echo -e "\n✅${GN:-} Welcome-Screen installed with fastfetch${CL:-}"
       return 0
     fi
   else
